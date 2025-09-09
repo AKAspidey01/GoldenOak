@@ -1,0 +1,615 @@
+.home-section-1 {
+    background: url('../../assets/images/home-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 200px 0px 80px 0px;
+
+    .home-section-1-banner-content {
+        h1 {
+            font-size: 70px;
+            font-weight: normal;
+            color: #fff;
+            line-height: 82px;
+            span {
+                font-style: italic;
+            }
+        }
+
+        p {
+            font-family: "Manrope", sans-serif !important;
+            font-size: 20px;
+            line-height: 40px;
+            font-weight: 400;
+            margin-top: 14px !important;
+        }
+    }
+    .banner-buttons {
+        button {
+            font-size: 18px;
+            font-weight: 600;
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+.home-section-2 {
+    padding: 100px 0px;
+}
+
+.top-block-tag {
+    position: relative;
+    margin-bottom: 20px;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background: #FFCA08;
+        content: '';
+    }
+}
+
+.block-content-section {
+    h2 {
+        font-size: 50px;
+        color: #101010;
+        line-height: 70px;
+
+        span {
+            color: #00AC76 !important;
+            font-style: italic;
+        }
+    }
+    .para-block-content-sec {
+        margin-top: 10px;
+    }
+
+    p {
+        color: #101010;
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+.similar-block-button {
+    margin-top: 40px;
+    button {
+        font-weight: 600;
+    }
+}
+
+.home-section-3 {
+    background: url('../../assets/images/gray-pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0px;
+
+    .home-sec-3-grid {
+        margin-top: 30px;
+    }
+
+    .drinks-images-sec-3 {
+        height: 350px;
+        border-radius: 16px;
+        overflow: hidden;
+        
+        img {
+            object-fit: cover;
+            
+        }
+        .abs-sec-3-detail-card {
+            width: calc(100% - 20px);
+            transform: translate(-50% , -0%);
+            left: 50%;
+            border-radius: 8px;
+        }
+    }
+}
+
+
+.home-section-4 {
+    padding: 100px 0px;
+
+    .home-sec-4-tabs-sec {
+        button.MuiButtonBase-root {
+            font-size: 16px !important;
+            text-transform: capitalize !important;
+            font-weight: normal !important;
+            font-family: "Plus Jakarta Sans", sans-serif !important;
+            transition-duration: 0.3s !important;
+            padding: 4px 20px !important;
+            height: 40px !important;
+            min-height: 40px !important;
+            max-height: 40px !important;
+            border-radius: 50px !important;
+        }
+        button.Mui-selected {
+            background: #707070 !important;
+            color: #fff !important;
+        }
+        .main-menu-section {
+            .MuiTabs-indicator  {
+                display: none !important;
+            }
+        }
+        .sec-4-full-menu-mobile-btn {
+            display: none;
+        }
+        .sec-4-full-menu-desktop-btn {
+            display: block;
+        }
+    }
+}
+
+
+.home-section-5 {
+    background: url('../../assets/images/add-bottom-bg-home.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0px;
+
+    .home-sec-5-content {
+        h2 {
+            font-size: 50px;
+            line-height: 70px;
+            color: #fff;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff ;
+            margin-top: 15px !important;
+            text-align: center;
+        }
+    }
+}
+
+
+.home-section-6 {
+    padding: 100px 0px;
+}
+
+.home-section-7 {
+    background: url('../../assets/images/gray-pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0px;
+
+    .openinng-timings-contact-sec {
+        .left-calendar-img {
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        .right-timings-text {
+            h4 {
+                font-style: italic;
+                font-size: 26px;
+                margin-bottom: 0px !important;
+            }
+            p {
+                font-size: 24px;
+                color: #101010;
+
+            }
+        }
+    }
+
+    .contact-form-section {
+        .form-inputsec {
+            input , textarea{
+                background: #F6F6F6;
+                padding: 12px 25px;
+                border-radius: 10px;
+                font-size: 16px;
+                color: #101010;
+                font-weight: 500;
+                width: 100%;
+            }
+            textarea {
+                border: none;
+                resize: none;
+                height: 120px;
+            }
+        }
+        .bottom-form-submitter {
+            button {
+                padding: 6px 34px 6px 14px;
+                border-radius: 50px;
+                color: #fff;
+                font-weight: 600;
+                font-size: 18px;
+                transition-duration: 0.3s;
+                width: 100%;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+                
+                &:hover {
+                    background: #FFCA08;
+                    color: #101010;
+                }
+                i {
+                    color: #fff;
+                    font-size: 18px;
+                    transition-duration: 0.3s;
+                }
+                &:hover i {
+                    color: #101010;
+                }
+            }
+        }
+    }
+}
+
+.home-section-8 {
+    padding: 100px 0px;
+}
+
+.home-section-9 {
+    height: 450px;
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .home-section-1 {
+        height: auto !important;
+        background-position: left !important;
+
+        .home-section-1-banner-content {
+            h1 {
+                font-size: 50px;
+                line-height: 68px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 30px;
+            }
+            .banner-buttons button {
+                font-size: 16px;
+                padding: 8px 26px;
+            }
+            .banner-left-content-home {
+                grid-column: span 7 / span 7 !important;
+            }
+        }
+    }
+
+    .home-section-2 {
+        .home-section-2-grid {
+            gap: 40px 0px;
+            .similar-home-sec-2-cols {
+                grid-column: span 12 / span 12;
+            }
+            .left-home-section-2 {
+                img {
+                    max-height: 400px;
+                    object-fit: contain;
+                    object-position: left;
+                }
+            }
+        }
+        
+    }
+
+    .home-section-3 {
+        .home-sec-3-grid {
+            gap: 20px !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    .home-section-4 {
+        .tab-section-home-column {
+            .single-tab-section-home-screen {
+                gap: 30px 0px;
+                .left-menu-section-home-screen {
+                    grid-column: span 12 / span 12;
+                    order: 2;
+                }
+                .right-image-sec-tab {
+                    grid-column:  span 12 / span 12;
+                    order: 1;
+                    
+                    img {
+                        max-height: 400px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .home-sec-4-tabs-sec {
+            .sec-4-full-menu-mobile-btn {
+                grid-column: span 12 / span 12;
+                display: block !important;
+                
+            }
+            .sec-4-full-menu-desktop-btn {
+                display: none !important;
+            }
+            .tab-menu-column-sec-4 {
+                grid-column: span 12 / span 12;
+            }
+
+        }
+    }
+    
+    .home-section-6 {
+        .home-section-6-grid {
+            gap: 30px 0px;
+            .similar-home-sec-6-cols {
+                grid-column: span 12 / span 12;
+            }
+        }        
+    }
+
+    .home-section-7 {
+        .contact-secton-grid {
+            gap: 40px 0px;
+            .addresses-section {
+                order: 2;
+            }
+            .contact-form-section {
+                order: 1;
+            }
+            .similar-home-sec-7-cols {
+                grid-column: span 12 / span 12;
+            }
+        }
+    }
+
+    .home-section-8 {
+        .home-section-8-grid {
+            gap: 40px 0px;
+            .right-home-section-8 {
+                order: 2;
+            }
+            .left-home-section-8 {
+                order: 1;
+
+                img {
+                    max-height: 400px !important;
+                    object-fit: contain !important;
+                    object-position: left;
+                }
+            }
+            .similar-home-sec-8-cols {
+                grid-column: span 12 / span 12;
+            }
+        }
+        
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 674px) {
+    .home-section-1 {
+        height: auto !important;
+        background-position-x: 30% !important;
+
+        .home-section-1-banner-content {
+            h1 {
+                font-size: 40px;
+                line-height: 54px;
+            }
+            .banner-left-content-home {
+                grid-column: span 12 / span 12 !important;
+            }
+            .banner-buttons button {
+                font-size: 16px;
+                padding: 8px 22px;
+            }
+
+            
+        }
+    }
+
+    .home-section-3 {
+        .home-sec-3-grid {
+            gap: 20px !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+    
+
+    .block-content-section {
+        h2 {
+            font-size: 40px;
+            line-height: 60px;
+        }
+    }
+    .top-block-tag {
+        p {
+            font-size: 15px;
+        }
+    }
+    .similar-block-button {
+        button {
+            font-size: 16px;
+            padding: 8px 22px;
+        }
+    }
+    .home-section-5 {
+        .home-sec-5-content{
+             h2 {
+                font-size: 40px;
+                line-height: 60px;
+            }
+        }
+    }
+    .home-section-7 {
+        .contact-secton-grid {
+            .similar-inputs-2-cols , .similar-inputs-4-cols{
+                grid-column:  span 12 / span 12;
+            }
+            .contact-form-inputs-grid {
+                gap: 20px 0px ;
+
+                .bottom-form-submitter {
+                    grid-column: span 8 / span 8;
+                }
+            }
+        }
+        .openinng-timings-contact-sec {
+            padding: 15px;
+            .opening-items-flexer {
+                gap: 12px;
+            }
+            .left-calendar-img {
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .right-timings-text {
+                h4 {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .home-section-7 {
+        .contact-secton-grid {
+            .multiple-address-main-grid {
+                gap: 40px 0px;
+
+
+                .single-address-column {
+                    grid-column: span 12 / span 12;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 474.99px) {
+    .home-section-1 {
+        .home-section-1-banner-content {
+            h1 {
+                font-size: 38px;
+                line-height: 50px;
+            }            
+        }
+    }
+    .home-section-2 , .home-section-3 , .home-section-4 , .home-section-6 , .home-section-7 , .home-section-8{
+        padding: 50px 0px;
+    }
+    .block-content-section {
+        h2 {
+            font-size: 30px;
+            line-height: 46px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+    .home-section-3 {
+        .home-sec-3-grid {
+            gap: 20px !important;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        .drinks-images-sec-3 {
+            height: 260px;
+        }
+    }
+
+    .home-section-4 {
+
+        .top-menu-name-price  {
+            p {
+                font-size: 16px !important;
+            }
+        }
+        .home-sec-4-tabs-sec {
+            button.MuiButtonBase-root {
+                font-size: 15px !important;
+            }
+        }
+    }
+
+    .home-section-5 {
+        padding: 70px 0px;
+        .home-sec-5-content{
+             h2 {
+                font-size: 25px;
+                line-height: 38px;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400 !important;
+            }
+        }
+    }
+
+    .home-section-6 {
+        .left-home-section-6  {
+            img {
+                max-height: 250px !important;
+                object-fit: cover;
+            }
+        }
+    }
+    .home-section-7 {
+        .contact-form-section {
+            padding: 20px;
+        }
+        .contact-secton-grid {
+            .similar-inputs-2-cols , .similar-inputs-4-cols{
+                grid-column:  span 12 / span 12;
+            }
+            .contact-form-inputs-grid {
+                gap: 20px 0px ;
+
+                .bottom-form-submitter {
+                    grid-column: span 8 / span 8;
+                }
+            }
+        }
+        .openinng-timings-contact-sec {
+            .left-calendar-img {
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            .right-timings-text {
+                h4 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .home-section-9 {
+        height: 250px;
+    }
+}
