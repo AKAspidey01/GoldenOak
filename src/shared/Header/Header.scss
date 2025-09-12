@@ -143,6 +143,10 @@
                     background: #00000029;
                 }
             }
+            a.active {
+                background: #00AC76 !important;
+                color: #fff !important;
+            }
         }
         .mobile-header-menu.active {
             right: 0;

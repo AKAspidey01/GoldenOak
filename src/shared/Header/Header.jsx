@@ -85,11 +85,11 @@ const Header = ({headerMarquee}) => {
                             <div className="mobile-main-menu-listing-sec">
                                 <nav>
                                     <ul className='flex flex-col gap-y-4 header-navigation-menu'>
-                                        <li><NavLink to={'/'}>Home</NavLink></li>
-                                        <li><NavLink to={'/menu'}>Menu</NavLink></li>
-                                        <li><NavLink to={'/event-space'}>The Eclore Room Event Space</NavLink></li>
-                                        <li><a href="#">Join Our Team</a></li>
-                                        <li><NavLink to={'/our-vision'}>Our Vision</NavLink></li>
+                                        <li onClick={() => setMobileMenu(false)}><NavLink to={'/'}>Home</NavLink></li>
+                                        <li onClick={() => setMobileMenu(false)}><NavLink to={'/menu'}>Menu</NavLink></li>
+                                        <li onClick={() => setMobileMenu(false)}><NavLink to={'/event-space'}>The Eclore Room Event Space</NavLink></li>
+                                        <li onClick={() => setMobileMenu(false)}><a href="#">Join Our Team</a></li>
+                                        <li onClick={() => setMobileMenu(false)}><NavLink to={'/our-vision'}>Our Vision</NavLink></li>
                                     </ul>
                                 </nav>
                             </div>
