@@ -52,16 +52,18 @@ const Header = ({headerMarquee}) => {
                 <div className="container">
                     <div className="inner-header-content flex items-center justify-between">
                         <div className="left-header-logo h-14 w-fit">
-                            <img src={Logo}  alt="" />
+                            <NavLink to={'/'} className={'inline-block h-full'}>
+                                <img src={Logo}  alt="" />
+                            </NavLink>
                         </div>
-                        <div className="right-header-menu">
+                        <div className="right-header-menu desktop-menu-section">
                             <nav>
                                 <ul className='flex items-center gap-x-14 header-navigation-menu'>
                                     <li><NavLink to={'/'}>Home</NavLink></li>
                                     <li><NavLink to={'menu'}>Menu</NavLink></li>
-                                    <li><NavLink>The Eclore Room Event Space</NavLink></li>
-                                    <li><NavLink>Join Our Team</NavLink></li>
-                                    <li><NavLink>Our Vision</NavLink></li>
+                                    <li><NavLink to={'/event-space'}>The Eclore Room Event Space</NavLink></li>
+                                    <li><a href="#">Join Our Team</a></li>
+                                    <li><NavLink to={'/our-vision'}>Our Vision</NavLink></li>
                                 </ul>
                             </nav>
                         </div>
@@ -85,9 +87,9 @@ const Header = ({headerMarquee}) => {
                                     <ul className='flex flex-col gap-y-4 header-navigation-menu'>
                                         <li><NavLink to={'/'}>Home</NavLink></li>
                                         <li><NavLink to={'/menu'}>Menu</NavLink></li>
-                                        <li><NavLink>The Eclore Room Event Space</NavLink></li>
-                                        <li><NavLink>Join Our Team</NavLink></li>
-                                        <li><NavLink>Our Vision</NavLink></li>
+                                        <li><NavLink to={'/event-space'}>The Eclore Room Event Space</NavLink></li>
+                                        <li><a href="#">Join Our Team</a></li>
+                                        <li><NavLink to={'/our-vision'}>Our Vision</NavLink></li>
                                     </ul>
                                 </nav>
                             </div>

@@ -38,7 +38,9 @@ const Footer = () => {
                 <div className="footer-grid grid grid-cols-12">
                     <div className="footer-intro col-span-5">
                         <div className="footer-logo h-20 w-fit mb-4">
-                            <img src={Logo}  alt="" />
+                             <NavLink to={'/'} className={'inline-block h-full'}>
+                                <img src={Logo}  alt="" />
+                            </NavLink>
                         </div>
                         <p className='font-manrope text-Black opacity-70 w-[60%]'>From sunrise pancakes to mid-day favorites – we’ve got your cravings covered.</p>
                         <div className="social-icons flex items-center gap-6 mt-8">
@@ -57,7 +59,7 @@ const Footer = () => {
                                 <p>Quick Links</p>
                                 <nav className='mt-6'>
                                     <ul className='flex flex-col gap-y-4'>
-                                        <li><NavLink>Menu</NavLink></li>
+                                        <li><NavLink to={'/menu'}>Menu</NavLink></li>
                                         <li><NavLink>Join Our Team</NavLink></li>
                                         <li><NavLink>The Eclore Room Event Space</NavLink></li>
                                         <li><NavLink>Our Vision</NavLink></li>

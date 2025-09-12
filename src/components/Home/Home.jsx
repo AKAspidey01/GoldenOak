@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState  } from 'react';
 import './Home.scss';
 import AboutImage from '../../assets/images/home-section-2-left-image.png';
 import PrivateEvent from '../../assets/images/private-events.png';
@@ -18,6 +18,17 @@ import { contactFormValidation } from '../../utils/Validation';
 import { Formik , Form , Field } from 'formik';
 import Select from 'react-select'
 
+import emailjs from "@emailjs/browser";
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import ClipLoader from "react-spinners/ClipLoader"; 
+
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 
 const Home = () => {
@@ -115,6 +126,7 @@ const Home = () => {
     ];
 
     const [value, setValue] = useState(0);
+    const [specialReq , setSepcialReq] = useState('');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -132,6 +144,61 @@ const Home = () => {
 
     const handleContactForm = (data) => {
         console.log( "data" , data)
+    }
+    
+
+
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const navigate = useNavigate();
+
+    const contactPageFormSubmit = (values , {resetForm}) => {
+        setLoading(true);
+        setSuccess(false);
+
+        const serviceID = "service_vptgmb9";
+        const templateID = "template_5oyk4bg";
+        const userID = "e3K71oK7JTTmFE69-";
+
+        const templateParams = {
+            email: values.email,
+            mobileNumber: values.number,
+            userName: values.userName,
+            date: values.date,
+            timeSlot: values.time,
+            seats: values.seats,
+            requests: specialReq
+        };
+
+        emailjs.send(serviceID, templateID, templateParams, userID)
+        .then((response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            toast.success("Your request sent successfully");
+            setLoading(false);
+            setSuccess(true);
+            resetForm()
+
+            // optional: delay before navigating
+            setTimeout(() => {
+            //   navigate("/Thankyou");
+            }, 1000);
+        })
+        .catch((error) => {
+            setLoading(false);
+            setSuccess(false);
+            toast.error("Failed to send message.");
+        });
+    };
+
+    function numbersOnly(e) {
+        var key = e.key;
+        var regex = /[0-9]|\./;
+        if (!regex.test(key)) {
+            e.preventDefault();
+        }
+        else {
+            // console.log("You pressed a key: " + key);
+        }
     }
 
 
@@ -331,7 +398,7 @@ const Home = () => {
                                     <Formik
                                         validationSchema={contactFormValidation}
                                         initialValues={contactFormValues}
-                                        onSubmit={(values) => handleContactForm(values)}
+                                        onSubmit={(values , {resetForm}) => contactPageFormSubmit(values , {resetForm})}
                                     >
                                         {({  errors, touched , handleSubmit , values , setFieldValue}) => (
                                         <Form>
@@ -342,7 +409,7 @@ const Home = () => {
                                                     />                                
                                                 </div>
                                                 <div className="form-inputsec relative similar-inputs-2-cols col-span-6">
-                                                    <Field type="number" name="number" placeholder='Mobile Number'
+                                                    <Field type="tel" name="number" onKeyPress={(e) => numbersOnly(e)} maxLength={10} placeholder='Mobile Number'
                                                         className={`outline-none border focus:border-secondary duration-300  ${errors.number && touched.number ? 'border-red-500 border-opacity-100 bg-red-500 bg-opacity-10 placeholder:text-red-500 text-red-500' : 'text-Black border-transparent placeholder:text-Black'}`} 
                                                     />                                
                                                 </div>
@@ -351,10 +418,21 @@ const Home = () => {
                                                         className={`outline-none border focus:border-secondary duration-300  ${errors.email && touched.email ? 'border-red-500 border-opacity-100 bg-red-500 bg-opacity-10 placeholder:text-red-500 text-red-500' : 'text-Black border-transparent placeholder:text-Black'}`} 
                                                     />                                
                                                 </div>
-                                                <div className="form-inputsec relative similar-inputs-4-cols col-span-4">
-                                                    <Field type="date" name="date" placeholder='Date'
-                                                        className={`outline-none border focus:border-secondary duration-300  ${errors.date && touched.date ? 'border-red-500 border-opacity-100 bg-red-500 bg-opacity-10 placeholder:text-red-500 text-red-500' : 'text-Black border-transparent placeholder:text-Black'}`} 
-                                                    />                                
+                                                <div className="form-inputsec relative similar-inputs-4-cols col-span-4">  
+                                                    <Field name="date">
+                                                        {({ field, form }) => (
+                                                            <input
+                                                                {...field}
+                                                                // type="date"
+                                                                onFocus={(e) => (e.target.type = "date")}
+                                                                onBlur={(e) => {
+                                                                    if (!e.target.value) e.target.type = "text";
+                                                                }}
+                                                                className={`outline-none border focus:border-secondary duration-300 ${errors.date && touched.date ? 'border-red-500 border-opacity-100 bg-red-500 bg-opacity-10 placeholder:text-red-500 text-red-500' : 'text-Black border-transparent placeholder:text-Black'}`} 
+                                                                placeholder="Date"
+                                                            />
+                                                        )}
+                                                    </Field>                       
                                                 </div>
                                                 <div className="form-inputsec relative similar-inputs-4-cols col-span-4">
                                                     <Select options={timeOptions} 
@@ -370,9 +448,9 @@ const Home = () => {
                                                                     background: '#F6F6F6',
                                                                     fontSize: 16,
                                                                     color: "#101010",
-                                                                    fontWeight: 500,
                                                                     width: '100%',
-                                                                    outline: 'none'
+                                                                    outline: 'none',
+                                                                    fontWeight: 600,
                                                                 //   borderColor: state.isFocused ? 'grey' : 'red',
                                                                 }),
                                                             }}
@@ -386,16 +464,29 @@ const Home = () => {
                                                     />                                
                                                 </div>
                                                 <div className="form-inputsec relative col-span-12">
-                                                    <textarea type="number" name="seats" placeholder='Special Requests'
+                                                    <textarea type="number" placeholder='Special Requests' onChange={(e) => setSepcialReq(e.target.value)}
                                                         className={`outline-none focus:border-secondary duration-300 `} 
                                                     />                                
                                                 </div>
 
                                                 <div className="bottom-form-submitter  overflow-hidden relative group col-span-4">
-                                                    <button type='submit' onClick={handleSubmit} className='bg-secondary'>
-                                                        <i class="bi bi-send-fill"></i>
-                                                        Send
-                                                    </button>
+                                                    {loading ? 
+                                                        <button type='submit' onClick={handleSubmit} className={`bg-[#E1E1E1] ${loading == true ? 'btn-loading' : ''}`} disabled={loading == true}>
+                                                            <ClipLoader
+                                                                color={"#000"}
+                                                                loading={loading}
+                                                                override={override}
+                                                                size={30}
+                                                                aria-label="Loading Spinner"
+                                                                data-testid="loader"
+                                                            />
+                                                            <p className='text-sm'>Sending ...</p>
+                                                        </button> :
+                                                        <button type='submit' onClick={handleSubmit} className={`bg-secondary disabled:bg-gray-200 disabled:text-black disabled:hover:bg-gray-200 ${loading == true ? 'btn-loading' : ''}`} disabled={loading == true}>
+                                                            <i class="bi bi-send-fill"></i>
+                                                            Send
+                                                        </button>
+                                                    }
                                                 </div>
                                             </div>
                                         </Form>

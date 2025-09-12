@@ -9,6 +9,8 @@ import Header from './shared/Header/Header';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { LenisProvider } from './utils/LenisProvider'
 import Menu from './components/Menu/Menu'
+import ScrollToTop from './utils/ScrollToTop';
+import { Toaster } from "react-hot-toast";
 
 
 function App() {
@@ -26,6 +28,33 @@ function App() {
   return (
     <LenisProvider>
       <Router>
+        <ScrollToTop/>
+        <Toaster 
+          position="top-center"
+          reverseOrder={false}
+          gutter={12}
+          containerClassName=""
+          containerStyle={{}}
+          toastOptions={{
+            className: '',
+            duration: 5000,
+            style: {
+              background: '#363636',
+              color: '#fff',
+              fontFamily: 'Poppins',
+              paddingRight: 15,
+              paddingLeft: 15,
+            },
+        
+            success: {
+              duration: 3000,
+              theme: {
+                primary: 'green',
+                secondary: 'black',
+              },
+            },
+          }}
+      />
         <Header headerMarquee={headerMarquee}/>
         <Routes>
           <Route path='/' Component={Home} exact={true}/>

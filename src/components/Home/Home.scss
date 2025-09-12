@@ -462,6 +462,12 @@
 
                 .bottom-form-submitter {
                     grid-column: span 8 / span 8;
+                    button.btn-loading {
+                        color: #101010 !important;
+                        &:hover {
+                            background: #e5e7eb !important;
+                        }
+                    }
                 }
             }
         }

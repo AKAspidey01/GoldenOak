@@ -26,6 +26,15 @@
             }
         }
     }
+    .right-header-menu.desktop-menu-section {
+        ul {
+            li {
+                a.active {
+                    color: #00AC76 !important;
+                }
+            }
+        }
+    }
 
     .inner-header-strip {
         button {
