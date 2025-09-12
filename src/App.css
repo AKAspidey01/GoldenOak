@@ -48,6 +48,39 @@ img {
   padding: 0px 30px;
 }
 
+.main-breadcrumb-similar h2 {
+  font-size: 50px;  
+  color: #fff;
+  text-align: center;
+
+}
+
+.main-breadcrumb-similar p {
+  font-size: 16px;  
+  color: #FFCA08;
+  font-weight: 400;
+  
+}
+
+.main-breadcrumb-similar a {
+  font-size: 16px;  
+  color: #fff;
+  font-weight: 400;
+  transition-duration: 0.3s;
+}
+
+
+.main-breadcrumb-similar a:hover {
+  color: #FFCA08 !important;
+}
+
+.main-breadcrumb-similar {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 
 @media only screen and (max-width: 474.99px) {
   .container {

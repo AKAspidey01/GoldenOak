@@ -57,8 +57,8 @@ const Header = ({headerMarquee}) => {
                         <div className="right-header-menu">
                             <nav>
                                 <ul className='flex items-center gap-x-14 header-navigation-menu'>
-                                    <li><NavLink>Home</NavLink></li>
-                                    <li><NavLink>Menu</NavLink></li>
+                                    <li><NavLink to={'/'}>Home</NavLink></li>
+                                    <li><NavLink to={'menu'}>Menu</NavLink></li>
                                     <li><NavLink>The Eclore Room Event Space</NavLink></li>
                                     <li><NavLink>Join Our Team</NavLink></li>
                                     <li><NavLink>Our Vision</NavLink></li>
@@ -83,8 +83,8 @@ const Header = ({headerMarquee}) => {
                             <div className="mobile-main-menu-listing-sec">
                                 <nav>
                                     <ul className='flex flex-col gap-y-4 header-navigation-menu'>
-                                        <li><NavLink>Home</NavLink></li>
-                                        <li><NavLink>Menu</NavLink></li>
+                                        <li><NavLink to={'/'}>Home</NavLink></li>
+                                        <li><NavLink to={'/menu'}>Menu</NavLink></li>
                                         <li><NavLink>The Eclore Room Event Space</NavLink></li>
                                         <li><NavLink>Join Our Team</NavLink></li>
                                         <li><NavLink>Our Vision</NavLink></li>

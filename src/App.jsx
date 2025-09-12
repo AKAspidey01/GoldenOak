@@ -8,6 +8,8 @@ import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 import Header from './shared/Header/Header';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { LenisProvider } from './utils/LenisProvider'
+import Menu from './components/Menu/Menu'
+
 
 function App() {
   const [headerMarquee, setHeaderMarquee] = useState(false)
@@ -26,7 +28,8 @@ function App() {
       <Router>
         <Header headerMarquee={headerMarquee}/>
         <Routes>
-          <Route path='/' Component={Home}/>
+          <Route path='/' Component={Home} exact={true}/>
+          <Route path='/menu' Component={Menu} exact={true}/>
         </Routes>
         <Footer/>
       </Router>
