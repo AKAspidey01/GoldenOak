@@ -79,6 +79,10 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
+  .main-breadcrumb-similar {
+      background: url("./assets/images/breadcrumb-menu.png");
+      padding: 200px 0px 100px 0px;
+  }
 
 
 

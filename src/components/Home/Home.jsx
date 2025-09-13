@@ -33,7 +33,6 @@ const override = {
 
 const Home = () => {
 
-
     const morningSipsData = [
         {
             img: Mimosas,
@@ -216,8 +215,8 @@ const Home = () => {
                                         <p className='text-white'>Step inside <strong>Golden Oak</strong> and discover a place where flavors, comfort, and hospitality come together. Whether it’s a family dinner or a casual outing, we serve dishes made with love to make every visit special</p>
                                     </div>
                                     <div className="banner-buttons flex items-center gap-x-8 mt-12">
-                                        <div className="button-left-home-sec-1"><button className='px-10 py-[10px] rounded-full bg-secondary text-white hover:bg-primary hover:text-Black' type="button">Open Menu</button></div>
-                                        <div className="button-right-home-sec-1"><button className='px-10 py-[10px] rounded-full bg-white text-secondary hover:bg-primary hover:text-Black' type="button">Book Table</button></div>
+                                        <div className="button-left-home-sec-1"><button className='px-10 py-[10px] rounded-full bg-secondary text-white hover:bg-primary hover:text-Black' type="button" onClick={() => navigate('/menu')}>Open Menu</button></div>
+                                        <div className="button-right-home-sec-1"><button className='px-10 py-[10px] rounded-full bg-white text-secondary hover:bg-primary hover:text-Black' type="button">Join Us</button></div>
                                     </div>
                                 </div>
                             </div>

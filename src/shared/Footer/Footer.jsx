@@ -59,20 +59,18 @@ const Footer = () => {
                                 <p>Quick Links</p>
                                 <nav className='mt-6'>
                                     <ul className='flex flex-col gap-y-4'>
-                                        <li><NavLink to={'/menu'}>Menu</NavLink></li>
-                                        <li><NavLink>Join Our Team</NavLink></li>
-                                        <li><NavLink>The Eclore Room Event Space</NavLink></li>
-                                        <li><NavLink>Our Vision</NavLink></li>
+                                        <li><NavLink to={'/'}>Home</NavLink></li>
+                                        <li><NavLink to={'/menu'}>Menu</NavLink></li>                                        
+                                        <li><NavLink to={'/our-vision'}>Our Vision</NavLink></li>                                        
                                     </ul>
                                 </nav>
                             </div>
                             <div className="single-footer-menu-blk">
-                                <p>Legal</p>
+                                <p>Extras</p>
                                 <nav className='mt-6'>
                                     <ul className='flex flex-col gap-y-4'>
-                                        <li><NavLink>Terms & Conditions</NavLink></li>
-                                        <li><NavLink>Privacy Policy</NavLink></li>
-                                        <li><NavLink>Help Center</NavLink></li>
+                                        <li><a href='#'>Join Our Team</a></li>
+                                        <li><NavLink to={'/event-space'}>The Eclore Room Event Space</NavLink></li>
                                     </ul>
                                 </nav>
                             </div>

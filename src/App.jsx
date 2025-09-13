@@ -11,6 +11,8 @@ import { LenisProvider } from './utils/LenisProvider'
 import Menu from './components/Menu/Menu'
 import ScrollToTop from './utils/ScrollToTop';
 import { Toaster } from "react-hot-toast";
+import OurVision from './components/OurVision/OurVision'
+import EventRoom from './components/EventRoom/EventRoom'
 
 
 function App() {
@@ -59,6 +61,8 @@ function App() {
         <Routes>
           <Route path='/' Component={Home} exact={true}/>
           <Route path='/menu' Component={Menu} exact={true}/>
+          <Route path='/our-vision' Component={OurVision} exact={true}/>
+          <Route path='/event-space' Component={EventRoom} exact={true}/>
         </Routes>
         <Footer/>
       </Router>
