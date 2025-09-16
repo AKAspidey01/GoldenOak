@@ -20,7 +20,7 @@ export default function MenuTabs({ value, handleChange }) {
         <Tab label="Bagels" />
         <Tab label="Healthy picks" />
         <Tab label="Biscuit & Gravy" />
-        <Tab label="Omelets" />
+        <Tab label="Pancakes" />
       </Tabs>
     </div>
   );
