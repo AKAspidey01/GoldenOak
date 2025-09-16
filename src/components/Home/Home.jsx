@@ -15,6 +15,14 @@ import WeeklySpec from '../../assets/images/weekly-specials.png';
 import CalendarIcon from '../../assets/images/timings-calendar.svg';
 import { contactFormValidation } from '../../utils/Validation';
 
+import Omelets from '../../assets/images/omelets.png';
+import Skillets from '../../assets/images/skillets.png';
+import FrenchToast from '../../assets/images/french-toast-home-page.png';
+import Pancakes from '../../assets/images/pancakes-home-page.png';
+import Waffles from '../../assets/images/waffles-home-page.png';
+
+
+
 import { Formik , Form , Field } from 'formik';
 import Select from 'react-select'
 
@@ -22,6 +30,7 @@ import emailjs from "@emailjs/browser";
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import ClipLoader from "react-spinners/ClipLoader"; 
+import MenuData from '../Menu/MenuContent';
 
 
 const override = {
@@ -33,30 +42,31 @@ const override = {
 
 const Home = () => {
 
+
     const morningSipsData = [
         {
-            img: Mimosas,
-            name: 'Mimosas',
+            img: Skillets,
+            name: 'Skillets',
             price: 5,
         },
         {
-            img: BloodyMary,
-            name: "Bloody Mary's",
+            img: Omelets,
+            name: "Omelets",
             price: 4,
         },
         {
-            img: Drafts,
-            name: 'Drafts',
+            img: FrenchToast,
+            name: 'French Toast',
             price: 3,
         },
         {
-            img: Wine,
-            name: 'Wine',
+            img: Pancakes,
+            name: 'Pancakes',
             price: 4,
         },
         {
-            img: wellDrinks,
-            name: 'wellDrinks',
+            img: Waffles,
+            name: 'Waffles',
             price: 4,
         },
     ]
@@ -241,7 +251,7 @@ const Home = () => {
                                         <p>At <strong>Golden Oak</strong>, we believe every meal should be more than just food—it should be an experience. Our chefs blend authentic recipes with a modern touch, creating dishes that bring comfort and joy to your table. Whether it’s your first visit or your fiftieth, you’ll always feel like family here.</p>
                                         <p>We’ve crafted a cozy space where friends meet, stories are shared, and every bite feels special. Come in hungry, leave with a smile.</p>
                                     </div>
-                                    <div className="similar-block-button"><button className='px-10 py-[10px] rounded-full bg-secondary text-white hover:bg-primary hover:text-Black' type="button">Know More</button></div>
+                                    <div className="similar-block-button"><button className='px-10 py-[10px] rounded-full bg-secondary text-white hover:bg-primary hover:text-Black' type="button" onClick={() => navigate('/our-vision')}>Know More</button></div>
                                 </div>
                             </div>
                         </div>
@@ -252,9 +262,9 @@ const Home = () => {
                 <div className="inner-home-section-3">
                     <div className="container">
                         <div className="block-content-section">
-                            <h2>Morning Sips, <span>Happy Vibes</span></h2>
+                            <h2>Morning Bites, <span> Happy Starts</span></h2>
                             <div className="para-block-content-sec">
-                                <p>Start your day on a refreshing note with our Sunrise Happy Hour. Enjoy a handpicked <br /> selection of vibrant mocktails crafted with fresh fruits, herbs, and zesty flavors </p>
+                                <p>Enjoy the perfect balance of flavor and freshness with our hearty breakfast picks <br /> omelets, French toast, pancakes, and more, crafted to fuel your day.</p>
                             </div>
                         </div>
                         <div className="home-sec-3-grid grid grid-cols-5 gap-x-6">
@@ -289,10 +299,10 @@ const Home = () => {
                                 <MenuTabs value={value} handleChange={handleChange} />
                             </div>
                             <div className="col-span-4 text-end sec-4-full-menu-desktop-btn">
-                                <div className="block-button"><button className='px-10 py-[10px] rounded-full bg-secondary text-white hover:bg-primary hover:text-Black' type="button">View complete menu</button></div>
+                                <div className="block-button"><button className='px-10 py-[10px] rounded-full bg-secondary text-white hover:bg-primary hover:text-Black' type="button" onClick={() => navigate('/menu')}>View complete menu</button></div>
                             </div>
                             <div className="col-span-12 tab-section-home-column">
-                                {tabContentMenu.map((menu , index) => {
+                                {MenuData.map((menu , index) => {
                                     return (
                                         <TabPanel value={value} index={index}>
                                             <div className="single-tab-section-home-screen grid grid-cols-12 gap-x-12">
@@ -303,17 +313,17 @@ const Home = () => {
                                                             return (
                                                                 <div className={`single-menu-item pb-7  ${isLast ? 'border-b-0' : 'border-b border-b-borderColor'}`} key={menuIndex}>
                                                                     <div className="top-menu-name-price flex items-center justify-between gap-x-4 mb-2.5">
-                                                                        <p className='text-Black font-medium font-plusjakarta text-lg'>{item.head}</p>
+                                                                        <p className='text-Black font-medium font-plusjakarta text-lg'>{item.menuTitle}</p>
                                                                         <p className='text-Black font-medium font-plusjakarta text-lg'>{item.price}</p>
                                                                     </div>
-                                                                    <p className='text-sm font-plusjakarta font-normal text-Black w-10/12'>{item.text}</p>
+                                                                    <p className='text-sm font-plusjakarta font-normal text-Black w-10/12'>{item.menuDesc}</p>
                                                                 </div>
                                                             )
                                                         })}
                                                    </div>
                                                 </div>
                                                 <div className="right-image-sec-tab col-span-6">
-                                                    <img src={RightMenu} className='rounded-2xl' alt="" />
+                                                    <img src={RightMenu} className='rounded-2xl object-cover' alt="" />
                                                 </div>
                                             </div>
                                         </TabPanel>
@@ -331,8 +341,8 @@ const Home = () => {
                 <div className="inner-homw-section-5">
                     <div className="container">
                         <div className="home-sec-5-content">
-                            <h2>BOTTOMLESS MIMOSAS SATURDAYS</h2>
-                            <p>By glass only | 2 hour limit | $24.99</p>
+                            <h2>CINNAMON SWIRL PANCAKES</h2>
+                            <p>Our special treat, crafted with love.</p>
                         </div>
                     </div>
                 </div>
@@ -352,9 +362,9 @@ const Home = () => {
                                         <p className='text-lg italic'>Mon - Fri 7AM - 9AM</p>
                                     </div>
                                     <div className="para-block-content-sec flex flex-col gap-y-5">
-                                        <p>Two Eggs, Two Strips of Bacon, Hash Browns, Toast or Pancake and a Cup of Coffee or Soft Drink for $11.99. </p>
+                                        <p>Two Eggs, Two Strips of Bacon, Hash Browns, Toast for  $9.99 </p>
                                     </div>
-                                    <div className="similar-block-button"><button className='px-10 py-[10px] rounded-full bg-secondary text-white hover:bg-primary hover:text-Black' type="button">View Menu</button></div>
+                                    <div className="similar-block-button"><button className='px-10 py-[10px] rounded-full bg-secondary text-white hover:bg-primary hover:text-Black' type="button" onClick={() => navigate('/menu')}>View Menu</button></div>
                                 </div>
                             </div>
                         </div>

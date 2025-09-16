@@ -35,7 +35,7 @@ const EventRoom = () => {
                 <div className="inner-event-room-section-1">
                     <div className="container">
                         <div className="event-room-sec-1-grid grid grid-cols-12 gap-5">
-                            <div className="col-span-4 similar-event-room-sec-1-cols guests-col-event">
+                            {/* <div className="col-span-4 similar-event-room-sec-1-cols guests-col-event">
                                 <div className="inner-event-sec-1-col">
                                     <div className="top-event-room-icon">
                                         <img src={GuestsIcon} alt="" />
@@ -45,26 +45,26 @@ const EventRoom = () => {
                                         <p>Up to 200</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-span-4 similar-event-room-sec-1-cols timing-col-event">
+                            </div> */}
+                            <div className="col-span-6 similar-event-room-sec-1-cols timing-col-event">
                                 <div className="inner-event-sec-1-col">
                                     <div className="top-event-room-icon">
                                         <img src={TimingsIcon} alt="" />
                                     </div>
                                     <div className="event-room-card-content-sec">
                                         <h4>Timings</h4>
-                                        <p>4:00 PM - 12:00 AM</p>
+                                        <p>7:00 PM - 2:00 AM</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-4 similar-event-room-sec-1-cols pricing-col-event">
+                            <div className="col-span-6 similar-event-room-sec-1-cols pricing-col-event">
                                 <div className="inner-event-sec-1-col">
                                     <div className="top-event-room-icon">
                                         <img src={PricingIcon} alt="" />
                                     </div>
                                     <div className="event-room-card-content-sec">
                                         <h4>Pricing</h4>
-                                        <ul className='flex flex-wrap justify-center gap-x-10 gap-y-2'>
+                                        <ul className='hidden flex-wrap justify-center gap-x-10 gap-y-2'>
                                             <li>
                                                 <p>Mon - Tue : $500</p>
                                             </li>
@@ -78,6 +78,7 @@ const EventRoom = () => {
                                                 <p>Sun : $1,000</p>
                                             </li>
                                         </ul>
+                                        <p>Free Venue Space</p>
                                     </div>
                                 </div>
                             </div>
