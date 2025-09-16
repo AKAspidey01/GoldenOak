@@ -62,7 +62,7 @@ const Header = ({headerMarquee}) => {
                                     <li><NavLink to={'/'}>Home</NavLink></li>
                                     <li><NavLink to={'menu'}>Menu</NavLink></li>
                                     <li><NavLink to={'/event-space'}>The Eclore Room Event Space</NavLink></li>
-                                    <li><a href="#">Join Our Team</a></li>
+                                    <li><a href="https://forms.gle/3WTFEN171CRdeAJt6" target='_blank'>Join Our Team</a></li>
                                     <li><NavLink to={'/our-vision'}>Our Vision</NavLink></li>
                                 </ul>
                             </nav>
@@ -88,7 +88,7 @@ const Header = ({headerMarquee}) => {
                                         <li onClick={() => setMobileMenu(false)}><NavLink to={'/'}>Home</NavLink></li>
                                         <li onClick={() => setMobileMenu(false)}><NavLink to={'/menu'}>Menu</NavLink></li>
                                         <li onClick={() => setMobileMenu(false)}><NavLink to={'/event-space'}>The Eclore Room Event Space</NavLink></li>
-                                        <li onClick={() => setMobileMenu(false)}><a href="#">Join Our Team</a></li>
+                                        <li onClick={() => setMobileMenu(false)}><a href="https://forms.gle/3WTFEN171CRdeAJt6" target='_blank'>Join Our Team</a></li>
                                         <li onClick={() => setMobileMenu(false)}><NavLink to={'/our-vision'}>Our Vision</NavLink></li>
                                     </ul>
                                 </nav>

@@ -69,7 +69,7 @@ const Footer = () => {
                                 <p>Extras</p>
                                 <nav className='mt-6'>
                                     <ul className='flex flex-col gap-y-4'>
-                                        <li><a href='#'>Join Our Team</a></li>
+                                        <li><a href="https://forms.gle/3WTFEN171CRdeAJt6" target='_blank'>Join Our Team</a></li>
                                         <li><NavLink to={'/event-space'}>The Eclore Room Event Space</NavLink></li>
                                     </ul>
                                 </nav>
